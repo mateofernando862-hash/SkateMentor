@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="SkateMentor conecta skaters urbanos con mentores y comunidades locales." />
+    <title>SkateMentor | Aprende, patina y conecta</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%23d8ef62%22/><text x=%2250%22 y=%2258%22 text-anchor=%22middle%22 font-size=%2228%22 font-family=%22Arial%22 font-weight=%22700%22>SM</text></svg>" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="SkateMentor, inicio">
+        <span class="brand-mark" aria-hidden="true">SM</span>
+        <span>SkateMentor</span>
+      </a>
+      <nav aria-label="Navegación principal">
+        <a href="#mentores">Mentores</a>
+        <a href="#spots">Spots</a>
+        <a class="nav-action" href="#unirse">Unirme</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">La comunidad sobre ruedas</p>
+          <h1 id="hero-title">Tu próxima sesión empieza aquí.</h1>
+          <p class="hero-text">Encuentra mentores, descubre spots y conoce a personas que quieren impulsar el skate urbano contigo.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#mentores">Encontrar un mentor</a>
+            <a class="button button-secondary" href="#spots">Explorar spots</a>
+          </div>
+        </div>
+        <div class="hero-card" aria-label="Actividad de la comunidad">
+          <div class="board-art" aria-hidden="true">
+            <span class="wheel wheel-left"></span>
+            <span class="wheel wheel-right"></span>
+          </div>
+          <div>
+            <strong>128</strong>
+            <span>skaters activos esta semana</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="mentores" aria-labelledby="mentors-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Aprende en equipo</p>
+            <h2 id="mentors-title">Mentores de tu barrio</h2>
+          </div>
+          <div class="filter" role="group" aria-label="Filtrar mentores por nivel">
+            <button class="filter-button active" type="button" data-filter="todos">Todos</button>
+            <button class="filter-button" type="button" data-filter="principiante">Principiante</button>
+            <button class="filter-button" type="button" data-filter="avanzado">Avanzado</button>
+          </div>
+        </div>
+        <div class="mentor-grid" id="mentor-grid"></div>
+      </section>
+
+      <section class="section spots-section" id="spots" aria-labelledby="spots-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Puntos de encuentro</p>
+            <h2 id="spots-title">Rueda cerca de ti</h2>
+          </div>
+        </div>
+        <div class="spot-list" id="spot-list"></div>
+      </section>
+
+      <section class="join-section" id="unirse" aria-labelledby="join-title">
+        <div>
+          <p class="eyebrow">Haz crecer la comunidad</p>
+          <h2 id="join-title">¿Listo para tu próxima sesión?</h2>
+        </div>
+        <form id="join-form" class="join-form">
+          <label class="sr-only" for="email">Correo electrónico</label>
+          <input id="email" name="email" type="email" placeholder="tu@correo.com" required />
+          <button class="button button-primary" type="submit">Quiero participar</button>
+        </form>
+        <p id="form-message" class="form-message" role="status"></p>
+      </section>
+    </main>
+
+    <footer>
+      <a class="brand" href="#"><span class="brand-mark" aria-hidden="true">SM</span><span>SkateMentor</span></a>
+      <p>Una comunidad urbana, segura y libre.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
