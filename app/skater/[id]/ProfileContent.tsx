@@ -2,14 +2,16 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { useParams } from "next/navigation";
 import { SKATERS } from "../../data/skaters";
 
-export default function SkaterProfilePage() {
-  const params = useParams();
+export default function SkaterProfilePage({
+  id,
+}: {
+  id: string;
+}) {
   const [copied, setCopied] = useState(false);
 
-  const skaterId = Number(params?.id);
+  const skaterId = Number(id);
   const skater = SKATERS.find((item) => item.id === skaterId);
 
   if (!skater) {
